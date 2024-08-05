@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import SuperLaningPage from './SuperLaningPage';
+import Pricing from './Pricing';
+import TheQ from './Questionare';
+import G from './TheQuestion'
+import Consa from './ContaUs'
 
-function App() {
+
+export default function Example() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <Router>
+    
+    <div className="app-container">
+     
+      <Routes>
+        <Route path="/" element={<SuperLaningPage />} />
+        <Route path="/pricing" element={<Pricing />} />
+        <Route path="/Questionare" element={<G />} />
+      </Routes>
     </div>
+  </Router>
   );
 }
-
-export default App;
